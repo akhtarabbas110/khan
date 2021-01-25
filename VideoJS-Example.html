@@ -1,0 +1,47 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--[if IE 8 ]> <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> <![endif]-->
+  <script src="https://cdn.jsdelivr.net/npm/video.js@7.10.2/dist/video.min.js"></script>
+  <link href="https://raw.githubusercontent.com/akhtarabbas110/khan/main/videojs.css" rel="stylesheet" />
+  <style> body { max-width: 100%;   max-height: 100%;  padding-top: 1px;   margin:0 auto; } </style>
+</head>
+<body>
+
+  <video id="my-player" class="video-js" controls preload="auto" width="600"  height="440"  loop=""  muted  data-setup='{}'>
+    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4" />
+  </video>
+
+<script>
+var player = videojs('my-player');
+var options = {};
+var player = videojs('my-player', options, function onPlayerReady() {
+  videojs.log('Your player is ready!');
+  this.play();
+  player.autoplay('muted');
+  // How about an event listener?
+  this.on('ended', function() {
+    videojs.log('Awww...over so soon?!');
+    //window.location.reload();
+  });
+});
+player.fluid(true);
+//player.aspectRatio('16:9');
+//player.responsive(true);
+//player.src({type: 'video/mp4', src: window.atob(Vid)});
+var click = 0;
+var ClickEventHander = function(evt){ console.dir(this); console.log(evt.target); click++;
+UnMuteTV();
+}
+window.addEventListener('click',ClickEventHander);
+function UnMuteTV() { if(click < 5) {player.muted(false); player.setVolume(100); }}
+</script>
+
+
+</body>
+</html>
+
+
+
