@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Nafees-Nastaliq";
+  src: url(https://cdn.jsdelivr.net/npm/nafees-nastaliq/fonts/nafees-nastaliq-v1.2.woff2) format('woff2'),
+       url(https://unpkg.com/nafees-nastaliq/fonts/nafees-nastaliq-v1.2.woff2) format('woff2');
+}
+  /* CSS Aplly */
+body {
+    font-family: "Nafees-Nastaliq";
+}
+.post-title {
+  font-family: "Nafees-Nastaliq", "JameelNooriNastaliq", "Mehr", "Nafees", "UrduKhushKhatiBook", "Jameel Khushkhat-LK", "Gulzar", "Noto Nastaliq Urdu", "Amiri";
+	  text-align: right;
+}
+.entry-content {
+      font-family: "Nafees-Nastaliq", "JameelNooriNastaliq", "Mehr", "Nafees", "UrduKhushKhatiBook", "Jameel Khushkhat-LK", "Gulzar", "Noto Nastaliq Urdu", "Amiri";
+ text-align: right;
+} 
+.page-content-single {
+      font-family: "Nafees-Nastaliq", "JameelNooriNastaliq", "Mehr", "Nafees", "UrduKhushKhatiBook", "Jameel Khushkhat-LK", "Gulzar", "Noto Nastaliq Urdu", "Amiri";
+ text-align: right;
+}
